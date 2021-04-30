@@ -102,7 +102,7 @@ int main(){
 			annualT+=Ti[y][i];
 		}
 		
-		Ta.push_back(annualT);	
+		Ta.push_back(annualT/12);	
 	}
 	
 	//calculate h
@@ -118,6 +118,7 @@ int main(){
 				}
 				else h+=0;
 			}
+			h = h/12;
 			double maxt = std::max(Tmp-Ta[y], 0.0);
 			double r = c/L *(d/h)*maxt;
 			double eta = std::min(r, 1.0);	
